@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siyu Zhou Portfolio</title>
+    <!-- React & Babel CDN -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+// Portfolio.jsx (simplified standalone for CDN babel)
+const { useState, useEffect } = React;
+
+function Portfolio() {
+  return (
+    <div style={{fontFamily: 'sans-serif', padding: '20px'}}>
+      <h1>Siyu Zhou</h1>
+      <p>Ph.D. in Electrical Engineering (UTA, Aug 2025). Microgrids, resilient control,
+      power electronics, and uncertainty quantification.</p>
+      <ul>
+        <li>Email: siyuzhou96@gmail.com</li>
+        <li>Phone: +1 (682) 208‑4374</li>
+        <li><a href="https://www.linkedin.com/in/siyu-zhou-521547190">LinkedIn</a></li>
+      </ul>
+      <h2>Experience</h2>
+      <ul>
+        <li>Developed reinforcement learning–based controllers improving microgrid resilience under uncertain disturbances; validated on RTDS.</li>
+        <li>Designed & implemented resilient power buffer control; achieved ~32% improvement in system stability and mitigated cyber‑attack effects.</li>
+        <li>Built & operated hardware‑in‑the‑loop benches (Typhoon HIL, dSPACE) to evaluate converter and distributed control in real time.</li>
+        <li>Created data‑driven uncertainty‑quantification models, cutting evaluation runtime by ~50%.</li>
+      </ul>
+    </div>
+  );
+}
+
+ReactDOM.render(<Portfolio />, document.getElementById('root'));
+
+    </script>
+  </body>
+</html>
