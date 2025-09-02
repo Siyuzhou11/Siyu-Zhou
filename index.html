@@ -4,42 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Siyu Zhou Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- React & Babel CDN -->
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
-  <body>
+  <body class="bg-gray-50 text-gray-800">
     <div id="root"></div>
     <script type="text/babel">
-    
-// Portfolio.jsx (simplified standalone for CDN babel)
-const { useState, useEffect } = React;
-
 function Portfolio() {
   return (
-    <div style={{fontFamily: 'sans-serif', padding: '20px'}}>
-      <h1>Siyu Zhou</h1>
-      <p>Ph.D. in Electrical Engineering (UTA, Aug 2025). Microgrids, resilient control,
-      power electronics, and uncertainty quantification.</p>
-      <ul>
-        <li>Email: siyuzhou96@gmail.com</li>
-        <li>Phone: +1 (682) 208‑4374</li>
-        <li><a href="https://www.linkedin.com/in/siyu-zhou-521547190">LinkedIn</a></li>
-      </ul>
-      <h2>Experience</h2>
-      <ul>
-        <li>Developed reinforcement learning–based controllers improving microgrid resilience under uncertain disturbances; validated on RTDS.</li>
-        <li>Designed & implemented resilient power buffer control; achieved ~32% improvement in system stability and mitigated cyber‑attack effects.</li>
-        <li>Built & operated hardware‑in‑the‑loop benches (Typhoon HIL, dSPACE) to evaluate converter and distributed control in real time.</li>
-        <li>Created data‑driven uncertainty‑quantification models, cutting evaluation runtime by ~50%.</li>
-      </ul>
+    <div className="max-w-5xl mx-auto px-6 py-10">
+      {/* Header */}
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-2">Siyu Zhou</h1>
+        <p className="text-lg text-gray-600">
+          Ph.D. in Electrical Engineering (UTA, Aug 2025, GPA 4.0)<br/>
+          Microgrids • Resilient Control • Power Electronics • Uncertainty Quantification
+        </p>
+        <div className="flex justify-center gap-6 mt-4 text-blue-600">
+          <a href="mailto:siyuzhou96@gmail.com" className="hover:underline">📧 Email</a>
+          <a href="tel:+16822084374" className="hover:underline">📱 Phone</a>
+          <a href="https://www.linkedin.com/in/siyu-zhou-521547190" target="_blank" className="hover:underline">🔗 LinkedIn</a>
+        </div>
+      </header>
+
+      {/* Skills */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Skills</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="bg-white shadow rounded-lg p-4">
+            <h3 className="font-medium mb-2">Control & Power Systems</h3>
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Distributed / Resilient Control</li>
+              <li>DC-DC Converters</li>
+              <li>Microgrids</li>
+              <li>Event-Triggered Control</li>
+            </ul>
+          </div>
+          <div className="bg-white shadow rounded-lg p-4">
+            <h3 className="font-medium mb-2">Modeling & Data</h3>
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Uncertainty Quantification</li>
+              <li>Statistical Analysis</li>
+              <li>Optimization</li>
+              <li>Reinforcement Learning</li>
+            </ul>
+          </div>
+          <div className="bg-white shadow rounded-lg p-4">
+            <h3 className="font-medium mb-2">Tools & Programming</h3>
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>MATLAB / Simulink</li>
+              <li>Python, C/C++</li>
+              <li>Typhoon HIL, RTDS, dSPACE</li>
+              <li>SolidWorks, AutoCAD</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Experience</h2>
+        <div className="bg-white shadow rounded-lg p-6">
+          <h3 className="font-semibold">Graduate Research Assistant — UTA</h3>
+          <p className="text-sm text-gray-500 mb-3">Sep 2021 – Aug 2025</p>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Developed reinforcement learning–based controllers improving microgrid resilience under uncertain disturbances; validated on RTDS.</li>
+            <li>Designed & implemented resilient power buffer control; achieved ~32% improvement in system stability and mitigated cyber-attack effects.</li>
+            <li>Built & operated hardware-in-the-loop benches (Typhoon HIL, dSPACE) to evaluate converters and distributed control in real time.</li>
+            <li>Created data-driven uncertainty-quantification models, cutting evaluation runtime by ~50%.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Publications */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Publications</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div>
+            <span className="font-medium">On the Resilience Analysis of DC Microgrids With Power Buffer Control</span><br/>
+            IEEE Transactions on Circuits and Systems I (2024) – <a className="text-blue-600 underline" href="https://doi.org/10.1109/TCSI.2024.3415966">doi</a>
+          </div>
+          <div>
+            <span className="font-medium">Model-Based Dynamic Event-Triggered Distributed Control...</span><br/>
+            IEEE Internet of Things Journal (2023) – <a className="text-blue-600 underline" href="https://doi.org/10.1109/JIOT.2023.3305279">doi</a>
+          </div>
+          <div>
+            <span className="font-medium">Resilient Decentralized Control of Power Buffers in DC Microgrids</span><br/>
+            IEEE Control Systems Letters (2023) – <a className="text-blue-600 underline" href="https://doi.org/10.1109/LCSYS.2023.3341727">doi</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Honors */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Honors</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <li>Graduate School Dissertation Fellowship, UTA (2025)</li>
+          <li>Dr. Mo-Shing Chen Scholarship in Power Systems (2024, 2025)</li>
+          <li>National Post-Graduate Mathematical Contest in Modeling – Third Prize (2019)</li>
+        </ul>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-500 mt-12 border-t pt-6">
+        © {new Date().getFullYear()} Siyu Zhou — Arlington, TX<br/>
+        Open to roles in R&D, control engineering, and energy systems
+      </footer>
     </div>
   );
 }
 
 ReactDOM.render(<Portfolio />, document.getElementById('root'));
-
     </script>
   </body>
 </html>
