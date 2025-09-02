@@ -3,122 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siyu Zhou Portfolio</title>
+    <title>Siyu Zhou | Portfolio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- React & Babel CDN -->
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-800">
-    <div id="root"></div>
-    <script type="text/babel">
-function Portfolio() {
-  return (
-    <div className="max-w-5xl mx-auto px-6 py-10">
-      {/* Header */}
-      <header className="text-center mb-10">
-        <h1 className="text-4xl font-bold mb-2">Siyu Zhou</h1>
-        <p className="text-lg text-gray-600">
-          Ph.D. in Electrical Engineering (UTA, Aug 2025, GPA 4.0)<br/>
-          Microgrids • Resilient Control • Power Electronics • Uncertainty Quantification
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow fixed w-full top-0 left-0 z-50">
+      <div class="max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
+        <span class="font-bold text-lg">Siyu Zhou</span>
+        <div class="space-x-4 text-sm font-medium text-gray-700">
+          <a href="#skills" class="hover:text-blue-600">Skills</a>
+          <a href="#experience" class="hover:text-blue-600">Experience</a>
+          <a href="#publications" class="hover:text-blue-600">Publications</a>
+          <a href="#honors" class="hover:text-blue-600">Honors</a>
+          <a href="#patents" class="hover:text-blue-600">Patents</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-5xl mx-auto px-6 py-24 space-y-12">
+      <!-- Header -->
+      <header class="text-center">
+        <h1 class="text-4xl font-bold mb-2">Siyu Zhou</h1>
+        <p class="text-gray-600">
+          Ph.D. in Electrical Engineering (UTA, GPA 4.0, Graduated Aug 2025)
         </p>
-        <div className="flex justify-center gap-6 mt-4 text-blue-600">
-          <a href="mailto:siyuzhou96@gmail.com" className="hover:underline">📧 Email</a>
-          <a href="tel:+16822084374" className="hover:underline">📱 Phone</a>
-          <a href="https://www.linkedin.com/in/siyu-zhou-521547190" target="_blank" className="hover:underline">🔗 LinkedIn</a>
+        <div class="mt-4 flex flex-wrap justify-center gap-6 text-blue-600">
+          <a href="mailto:siyuzhou96@gmail.com" class="hover:underline">📧 siyuzhou96@gmail.com</a>
+          <a href="tel:+16822084374" class="hover:underline">📱 +1 (682) 208-4374</a>
+          <a href="https://www.linkedin.com/in/siyu-zhou-521547190" class="hover:underline" target="_blank">🔗 LinkedIn</a>
         </div>
       </header>
 
-      {/* Skills */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Skills</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="bg-white shadow rounded-lg p-4">
-            <h3 className="font-medium mb-2">Control & Power Systems</h3>
-            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-              <li>Distributed / Resilient Control</li>
-              <li>DC-DC Converters</li>
-              <li>Microgrids</li>
-              <li>Event-Triggered Control</li>
-            </ul>
-          </div>
-          <div className="bg-white shadow rounded-lg p-4">
-            <h3 className="font-medium mb-2">Modeling & Data</h3>
-            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-              <li>Uncertainty Quantification</li>
-              <li>Statistical Analysis</li>
-              <li>Optimization</li>
-              <li>Reinforcement Learning</li>
-            </ul>
-          </div>
-          <div className="bg-white shadow rounded-lg p-4">
-            <h3 className="font-medium mb-2">Tools & Programming</h3>
-            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-              <li>MATLAB / Simulink</li>
-              <li>Python, C/C++</li>
-              <li>Typhoon HIL, RTDS, dSPACE</li>
-              <li>SolidWorks, AutoCAD</li>
-            </ul>
-          </div>
-        </div>
+      <!-- Specialty Areas -->
+      <section id="specialty">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Specialty Areas</h2>
+        <p>Microgrid Control • Power Electronics • Distributed/Resilient Control • Optimization • Hardware-in-the-Loop Experiments • Reinforcement Learning • Uncertainty Quantification</p>
       </section>
 
-      {/* Experience */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Experience</h2>
-        <div className="bg-white shadow rounded-lg p-6">
-          <h3 className="font-semibold">Graduate Research Assistant — UTA</h3>
-          <p className="text-sm text-gray-500 mb-3">Sep 2021 – Aug 2025</p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Developed reinforcement learning–based controllers improving microgrid resilience under uncertain disturbances; validated on RTDS.</li>
-            <li>Designed & implemented resilient power buffer control; achieved ~32% improvement in system stability and mitigated cyber-attack effects.</li>
-            <li>Built & operated hardware-in-the-loop benches (Typhoon HIL, dSPACE) to evaluate converters and distributed control in real time.</li>
-            <li>Created data-driven uncertainty-quantification models, cutting evaluation runtime by ~50%.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Publications */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Publications</h2>
-        <div className="space-y-3 text-sm text-gray-700">
-          <div>
-            <span className="font-medium">On the Resilience Analysis of DC Microgrids With Power Buffer Control</span><br/>
-            IEEE Transactions on Circuits and Systems I (2024) – <a className="text-blue-600 underline" href="https://doi.org/10.1109/TCSI.2024.3415966">doi</a>
-          </div>
-          <div>
-            <span className="font-medium">Model-Based Dynamic Event-Triggered Distributed Control...</span><br/>
-            IEEE Internet of Things Journal (2023) – <a className="text-blue-600 underline" href="https://doi.org/10.1109/JIOT.2023.3305279">doi</a>
-          </div>
-          <div>
-            <span className="font-medium">Resilient Decentralized Control of Power Buffers in DC Microgrids</span><br/>
-            IEEE Control Systems Letters (2023) – <a className="text-blue-600 underline" href="https://doi.org/10.1109/LCSYS.2023.3341727">doi</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Honors */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Honors</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Graduate School Dissertation Fellowship, UTA (2025)</li>
-          <li>Dr. Mo-Shing Chen Scholarship in Power Systems (2024, 2025)</li>
-          <li>National Post-Graduate Mathematical Contest in Modeling – Third Prize (2019)</li>
+      <!-- Education -->
+      <section id="education">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Education</h2>
+        <ul class="space-y-2">
+          <li><strong>Ph.D.</strong> Electrical Engineering, University of Texas at Arlington (2021–2025, GPA 4.0)</li>
+          <li><strong>M.S.</strong> Mechanical Engineering, Zhejiang University (2018–2021)</li>
+          <li><strong>B.S.</strong> Mechanical Engineering, Hubei University of Technology (2014–2018)</li>
         </ul>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center text-sm text-gray-500 mt-12 border-t pt-6">
-        © {new Date().getFullYear()} Siyu Zhou — Arlington, TX<br/>
-        Open to roles in R&D, control engineering, and energy systems
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Skills</h2>
+        <ul class="grid md:grid-cols-2 gap-4 list-disc list-inside">
+          <li>Programming: MATLAB, Python, C/C++</li>
+          <li>Simulation & Control: Simulink, Typhoon HIL, RTDS, RSCAD</li>
+          <li>Statistical Tools: Minitab, DOE methods</li>
+          <li>Engineering: SolidWorks, AutoCAD, PLC</li>
+        </ul>
+      </section>
+
+      <!-- Research Experience -->
+      <section id="experience">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Research Experience</h2>
+        <div class="space-y-6">
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold">Graduate Research Assistant — UTA (2021–2025)</h3>
+            <ul class="list-disc list-inside space-y-2 mt-2 text-gray-700 text-sm">
+              <li>Developed power buffer systems using Simulink to compensate transients during disturbances.</li>
+              <li>Designed distributed, event-triggered resilient control methods for DC-DC converters.</li>
+              <li>Validated methods via hardware-in-the-loop (Typhoon HIL & dSPACE).</li>
+              <li>Analyzed failures & designed resilient buffer control to mitigate cyber-attacks.</li>
+              <li>Built statistical regression models for large-scale microgrids, optimized via Taguchi DOE.</li>
+              <li>Developed RL-based control & game-theory planning for ultra-resilient microgrids.</li>
+              <li>Worked with NREL data for uncertainty evaluation strategies.</li>
+            </ul>
+          </div>
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold">Graduate Research Assistant — Zhejiang University (2018–2021)</h3>
+            <ul class="list-disc list-inside space-y-2 mt-2 text-gray-700 text-sm">
+              <li>Developed 3-DOF robotic polishing end-effector; CAD/SolidWorks design.</li>
+              <li>Implemented trajectory planning algorithms for smooth polishing of curved surfaces.</li>
+              <li>Validated methods with RobotStudio simulations & real experiments.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Activities -->
+      <section id="activities">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Professional Activities</h2>
+        <h3 class="font-medium">Keynote Presentations</h3>
+        <ul class="list-disc list-inside text-sm space-y-1 mb-4">
+          <li>Efficient Online Uncertainty Evaluation for Microgrid Systems (ONR, 2025)</li>
+          <li>Effective Evaluation of Microgrid Performance Statistics under High-Dimensional Uncertainties (ONR, 2024)</li>
+          <li>Resilient Control of DC Power Buffer System (ONR, 2023)</li>
+        </ul>
+        <h3 class="font-medium">Reviewer</h3>
+        <p class="text-sm text-gray-700">IEEE IoT Journal • IEEE Transactions on Power Systems • IEEE SMC Systems • IEEE TNNLS • International Journal of Robust and Nonlinear Control • IEEE IAS • IEEE TTE</p>
+        <h3 class="font-medium mt-4">Memberships</h3>
+        <p class="text-sm text-gray-700">IEEE Student Member (2022–) • IEEE PES Student Member (2024–)</p>
+      </section>
+
+      <!-- Honors -->
+      <section id="honors">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Honors & Awards</h2>
+        <ul class="list-disc list-inside space-y-2 text-sm">
+          <li>Graduate School Dissertation Fellowship, UTA (2025)</li>
+          <li>Dr. Mo-Shing Chen Scholarship in Power Systems, UTA (2024 & 2025)</li>
+          <li>Excellent Graduate Student, Zhejiang University (2019)</li>
+          <li>3rd Prize, National Post-Graduate Mathematical Contest in Modeling (2019)</li>
+          <li>Outstanding Graduate, Hubei University of Technology (2018)</li>
+          <li>3rd Prize, National College Student Robotics Competition (2017)</li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Publications</h2>
+        <ul class="list-disc list-inside text-sm space-y-2">
+          <li><strong>IEEE TCSI (2024)</strong> — On the Resilience Analysis of DC Microgrids with Power Buffer Control. <a href="https://doi.org/10.1109/TCSI.2024.3415966" class="text-blue-600 underline">doi</a></li>
+          <li><strong>IEEE IoT Journal (2023)</strong> — Model-Based Dynamic Event-Triggered Distributed Control... <a href="https://doi.org/10.1109/JIOT.2023.3305279" class="text-blue-600 underline">doi</a></li>
+          <li><strong>IEEE Control Systems Letters (2023)</strong> — Resilient Decentralized Control of Power Buffers... <a href="https://doi.org/10.1109/LCSYS.2023.3341727" class="text-blue-600 underline">doi</a></li>
+          <li><em>Under Review</em> — MPCM–Taguchi: An Efficient Method for High-Dimensional Uncertain Systems</li>
+          <li><strong>IEEE SMC 2025</strong> — Efficient Online Uncertainty Evaluation for Microgrid Systems (accepted)</li>
+        </ul>
+      </section>
+
+      <!-- Patents -->
+      <section id="patents">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Patents</h2>
+        <ul class="list-disc list-inside text-sm space-y-2">
+          <li>A Complex Surface Polishing Device (CN110450028B)</li>
+          <li>A Joint Design for Industrial Polishing Robot (CN110509309B)</li>
+          <li>A Flexible Bar Cutting Machine (CN108994884B)</li>
+          <li>A New Type of 8-shaped Barrier Free Car (CN206404309U)</li>
+          <li>A Vehicle Mounted Embedded Logistics Tracking and Monitoring System (CN206162676U)</li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center text-sm text-gray-500 border-t pt-6 mt-10">
+        © 2025 Siyu Zhou — Arlington, TX. Open to roles in R&D, control engineering, and energy systems.
       </footer>
     </div>
-  );
-}
-
-ReactDOM.render(<Portfolio />, document.getElementById('root'));
-    </script>
   </body>
 </html>
